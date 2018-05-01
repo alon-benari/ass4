@@ -1,0 +1,42 @@
+ <!--Replaced this with the Angular template for states component of CS142 Project #4
+    Problem #2.-->
+    <!DOCTYPE html>
+    <html  ng-app="cs142App" ng-controller="MainController">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src = "components/modelData/States.js"> </script>
+        <title>{{main.title || "CS142 Class Project" }}</title>
+    
+
+    </head>
+    <body>  
+        <!-- <div 
+            class = "specialHeader"
+            ng-include="'components/header/headerTemplate.html'" ng-controller="headerController">
+        </div> -->
+
+        <div ng-controller = "StatesController" class = "stateSubString">
+          
+             <label >Input a string to search within a State's name: <input type="text" 
+                 ng-change = "parseString(main.string)"
+                 ng-model="main.string"></label> <br>
+
+            <p> 
+               String to be searched is: {{main.string}}  <br>
+            </p>
+
+            <p>
+                States who have the string are : 
+                <table>
+                    <tr ng-repeat = "x in main.parsedStates">
+                        <td>
+                            {{x}}
+                        </td>
+                    </tr>
+                </table>
+            </p>
+        </div>
+    </body>
+    </html>

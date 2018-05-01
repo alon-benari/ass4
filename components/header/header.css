@@ -1,0 +1,8 @@
+.specialHeader{
+  width: 500px;
+  height:100px;
+  border: 3px dashed blue;
+  font-family: 'Courier New', Courier, monospace;
+  color:red;
+  
+}

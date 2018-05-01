@@ -1,0 +1,14 @@
+/*
+CSS for the CS142 project #4 Problem #2 states component
+
+Since CSS uses a global name space for classes we should use names starting with
+cs142-states- here.
+*/
+.stateSubString {
+  width:400px;
+  border: 25px solid green;
+  text-align: center;
+}
+td{
+  color:red
+}

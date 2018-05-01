@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html ng-app="cs142App" ng-controller="MainController">
+ <head>
+<!-- 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+  <title>{{main.title || "CS142 Class Project"}}</title>
+
+   <!-- Example of setting the page title from the controller. The template can
+        be an expression so we have a default value if the controller doesn't define it-->
+        <title>{{main.title || "CS142 Class Project"}}</title>
+        <!-- Add Angular -->
+        <script src="node_modules/angular/angular.js"></script>
+       
+        <script src ="node_modules/angular-route/angular-route.js"></script>
+       
+        <!--Include the main controller (MainController) and stylesheet -->
+        <script src="mainController.js"></script>
+        <link rel="stylesheet" type="text/css" href="main.css" />
+        <!-- Adding example controller and css-->
+        <script src="components/example/exampleController.js"></script>
+        <link rel="stylesheet" type="text/css" href="components/example/example.css" />
+        <script src="modelData/example.js"></script>
+        <!-- Adding the states controller and css -->
+        <script src="components/states/statesController.js"></script>
+
+        <!-- <script src = "components/modelData/States.js"> </script> -->
+       <link rel="stylesheet" type="text/css" href="components/states/states.css" /> 
+        <!-- Adding the header contorller and css -->
+        <script src="components/header/headerController.js"></script>
+        <link rel="stylesheet" href="components/header/header.css">
+<body>
+    <div 
+      class = "specialHeader"
+       ng-include="'components/header/headerTemplate.html'" ng-controller="headerController">
+  </div>
+ <div >
+    <button  ng-click = "switchTemplate()"> switch to  {{main.template}} </button>
+   {{main.toggle}}
+    <div ng-if="main.toggle">
+        Hello
+        <div ng-include="'components/states/statesTemplate.html'" ng-controller="StatesController"></div>
+    </div>
+    <div ng-if = "!main.toggle">
+        goodbye
+        <div ng-include="'components/example/exampleTemplate.html'" ng-controller="ExampleController"></div>
+    </div>
+ </div>
+
+ 
+
+  <!-- show template: <input type = "checkbox" ng-model = "states" ng-init = "states = true"></input>
+  <div id = "theTemplate">
+nu shoin -->
+ <!-- <div ng-include="'components/example/exampleTemplate.html'" ng-controller="ExampleController"></div> -->
+  <!-- <div ng-if = "states">
+      hello
+       <div ng-include="'components/states/statesTemplate.html'" ng-controller="StatesController"></div>
+      -->
+  </div>
+
+ </div>
+
+   <!-- <div ng-view></div> -->
+   
+    
+</body>
+</html>
