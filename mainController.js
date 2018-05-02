@@ -35,20 +35,20 @@ cs142App.config(function($routeProvider){
   //     $scope.main.specialHeader = 'The time is: '+ new Date()
   //  }
     $scope.main.toggle = false;;
-    $scope.main.template = 'temp1';
+    $scope.main.template = 'states';
 
-    $scope.func = function(){
-    console.log('a func')
-  };
+  //   $scope.func = function(){
+  //   console.log('a func')
+  // };
     $scope.switchTemplate = function(){
       if ($scope.main.toggle){
-           $scope.main.template = 'temp1';
+           $scope.main.template = 'states';
            $scope.main.toggle =false
-           $scope.main.div = '<p> Hello </p>'
+           $scope.main.div = '<p> states </p>'
        }else {
-          $scope.main.template = 'temp2';
+          $scope.main.template = 'example';
           $scope.main.toggle = true
-          $scope.main.div = '<p> Shalom </p>'
+          $scope.main.div = '<p> example </p>'
     }
           return $scope.main.toggle
 

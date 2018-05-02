@@ -24,8 +24,7 @@
         <script src="modelData/example.js"></script>
         <!-- Adding the states controller and css -->
         <script src="components/states/statesController.js"></script>
-
-        <!-- <script src = "components/modelData/States.js"> </script> -->
+        <script src = "modelData/states.js"> </script>
        <link rel="stylesheet" type="text/css" href="components/states/states.css" /> 
         <!-- Adding the header contorller and css -->
         <script src="components/header/headerController.js"></script>
@@ -37,27 +36,20 @@
   </div>
  <div >
     <button  ng-click = "switchTemplate()"> switch to  {{main.template}} </button>
-   {{main.toggle}}
+   <!-- {{main.toggle}} -->
     <div ng-if="main.toggle">
-        Hello
+       
         <div ng-include="'components/states/statesTemplate.html'" ng-controller="StatesController"></div>
     </div>
     <div ng-if = "!main.toggle">
-        goodbye
+      
         <div ng-include="'components/example/exampleTemplate.html'" ng-controller="ExampleController"></div>
     </div>
  </div>
 
  
 
-  <!-- show template: <input type = "checkbox" ng-model = "states" ng-init = "states = true"></input>
-  <div id = "theTemplate">
-nu shoin -->
- <!-- <div ng-include="'components/example/exampleTemplate.html'" ng-controller="ExampleController"></div> -->
-  <!-- <div ng-if = "states">
-      hello
-       <div ng-include="'components/states/statesTemplate.html'" ng-controller="StatesController"></div>
-      -->
+
   </div>
 
  </div>

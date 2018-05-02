@@ -1,0 +1,23 @@
+.p5Formatting {
+  margin:10px;
+  height:80px;
+  width:100px;
+  border:2px solid black; 
+  padding:30px;
+  align-content: center;
+  text-align: center;
+  
+
+
+}
+
+a {
+ 
+  width:100px;
+ 
+  text-align: center;
+  border:2px solid black;
+  color:whitesmoke;
+  background-color:rgb(129, 80, 80);
+  margin:10px;
+}

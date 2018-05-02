@@ -25,19 +25,21 @@
         <!-- Adding the states controller and css -->
         <script src="components/states/statesController.js"></script>
 
-        <script src = "components/modelData/States.js"> </script>
+        <script src = "modelData/states.js"> </script>
        <link rel="stylesheet" type="text/css" href="components/states/states.css" /> 
         <!-- Adding the header contorller and css -->
         <script src="components/header/headerController.js"></script>
         <link rel="stylesheet" href="components/header/header.css">
+        <link rel="stylesheet" href="p5.css">
 <body>
     <div 
       class = "specialHeader"
        ng-include="'components/header/headerTemplate.html'" ng-controller="headerController">
   </div>
-  <div>
+  <div class = "p5Formatting">
       
       <a href="#!example">example</a> <br>
+      <p> </p>
       <a href="#!states">states</a>
   </div>
    <div ng-view></div>
